@@ -1,0 +1,5 @@
+# Ignorar node_modules
+src/node_modules/
+
+# Ignorar archivos grandes
+src/front/img/Video_Fondo_SevenDe7.mp4

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-yellow-400 to-yellow-500 flex justify-center items-center min-h-screen">
+
+    <!-- Logo and Form Container -->
+    <div class="w-full max-w-md bg-white rounded-lg shadow-lg p-8">
+        <!-- Logo -->
+        <div class="flex justify-center mb-6">
+            <img src="https://placehold.co/150x150" alt="Logo de Seven'De con un plato cubierto, un gorro de chef, y utensilios de cocina" class="w-24 h-24">
+        </div>
+        <!-- Title -->
+        <div class="text-center mb-6">
+            <h1 class="text-xl font-bold text-black">
+                <span class="border-l-4 border-yellow-400 px-2">SEVENDE</span>
+            </h1>
+            <p class="text-gray-600 mt-2">INICIAR SESIÓN</p>
+            <p class="text-sm text-gray-500 mt-1">Ingrese sus credenciales para acceder a su cuenta</p>
+        </div>
+        <!-- Form -->
+        <form>
+            <div class="mb-4">
+                <label for="email" class="block text-sm font-medium text-gray-700">Correo</label>
+                <input type="email" id="email" placeholder="Ingrese su correo electrónico" 
+                       class="w-full mt-2 px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-yellow-400 focus:outline-none text-gray-800">
+            </div>
+            <div class="mb-6">
+                <label for="password" class="block text-sm font-medium text-gray-700">Contraseña</label>
+                <input type="password" id="password" placeholder="Ingrese su contraseña" 
+                       class="w-full mt-2 px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-yellow-400 focus:outline-none text-gray-800">
+            </div>
+            <!-- Submit Button -->
+            <div>
+                <button type="submit" 
+                        class="w-full bg-yellow-400 text-white font-bold py-2 rounded-lg shadow hover:bg-yellow-500 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                    INICIAR
+                </button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-yellow-400 to-yellow-500 flex flex-col items-center min-h-screen py-8">
+
+    <!-- Header -->
+    <header class="flex justify-between items-center w-full max-w-6xl px-4 mb-8">
+        <img src="https://placehold.co/120x120" alt="Logo de Seven'De con utensilios de cocina" class="w-20">
+        <button class="bg-white text-black font-semibold py-2 px-4 rounded-lg shadow hover:bg-gray-100">CERRAR SESIÓN</button>
+    </header>
+
+    <!-- Title -->
+    <h1 class="text-2xl font-bold text-black mb-6">NEGOCIO 2</h1>
+
+    <!-- Order Form -->
+    <div class="bg-white rounded-lg shadow-lg p-8 w-full max-w-md">
+        <h2 class="text-lg font-bold text-black mb-6 text-center">PIDE TUS FAVORITOS:</h2>
+        <form action="#" method="POST" class="flex flex-col gap-4">
+            <!-- Entrada -->
+            <div>
+                <label for="entrada" class="block text-gray-700 font-bold mb-2">ENTRADAS:</label>
+                <input type="text" id="entrada" name="entrada" value="Causa" 
+                       class="w-full p-2 border border-gray-300 rounded-lg bg-gray-100 text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400" readonly>
+            </div>
+
+            <!-- Fondo -->
+            <div>
+                <label for="fondo" class="block text-gray-700 font-bold mb-2">FONDO:</label>
+                <input type="text" id="fondo" name="fondo" value="Puré con pollo" 
+                       class="w-full p-2 border border-gray-300 rounded-lg bg-gray-100 text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400" readonly>
+            </div>
+
+            <!-- Bebida -->
+            <div>
+                <label for="bebida" class="block text-gray-700 font-bold mb-2">BEBIDA:</label>
+                <input type="text" id="bebida" name="bebida" value="Limonada" 
+                       class="w-full p-2 border border-gray-300 rounded-lg bg-gray-100 text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400" readonly>
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex justify-between mt-6">
+                <button type="button" class="bg-yellow-400 text-white font-bold py-2 px-6 rounded-lg shadow hover:bg-yellow-500 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                    RESERVAR
+                </button>
+                <button type="button" class="bg-yellow-400 text-white font-bold py-2 px-6 rounded-lg shadow hover:bg-yellow-500 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                    PAGAR
+                </button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

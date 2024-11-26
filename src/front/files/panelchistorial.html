@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Pedidos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex min-h-screen bg-white">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-gray-100 flex flex-col items-center py-8 px-4 shadow-md">
+        <h1 class="text-2xl font-bold text-black mb-6">SevenDe</h1>
+
+        <!-- Profile Section -->
+        <div class="flex flex-col items-center mb-8">
+            <img src="https://placehold.co/80x80" alt="Foto de perfil de Sebastian Ayala" class="rounded-full w-20 h-20 mb-4">
+            <p class="text-lg font-bold text-black">Sebastian Ayala</p>
+            <p class="text-yellow-500 font-semibold">Estudiante</p>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="flex flex-col gap-4 w-full">
+            <a href="#" class="flex items-center gap-4 p-2 rounded-lg text-gray-700 hover:bg-gray-200">
+                <i class="fas fa-home"></i>
+                Inicio
+            </a>
+            <a href="#" class="flex items-center gap-4 p-2 rounded-lg text-gray-700 hover:bg-gray-200">
+                <i class="fas fa-utensils"></i>
+                Pedir menú
+            </a>
+            <a href="#" class="flex items-center gap-4 p-2 rounded-lg bg-yellow-400 text-white font-bold">
+                <i class="fas fa-file-alt"></i>
+                Historial de pedidos
+            </a>
+        </nav>
+
+        <!-- Logout -->
+        <div class="mt-auto w-full text-center">
+            <button class="flex items-center justify-center gap-2 text-gray-700 hover:text-gray-900 mt-8">
+                <i class="fas fa-sign-out-alt"></i>
+                Cerrar sesión
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-12 bg-white">
+        <h1 class="text-2xl font-bold mb-6">Historial de Pedidos</h1>
+
+        <!-- Table -->
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="bg-gray-100 text-gray-600 text-sm font-bold">
+                        <th class="py-4 px-6 border-b">N°</th>
+                        <th class="py-4 px-6 border-b">Puesto</th>
+                        <th class="py-4 px-6 border-b">Pedido</th>
+                        <th class="py-4 px-6 border-b">Fecha de reserva</th>
+                        <th class="py-4 px-6 border-b">Método de pago</th>
+                        <th class="py-4 px-6 border-b">Estado</th>
+                        <th class="py-4 px-6 border-b"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Row 1 -->
+                    <tr class="hover:bg-gray-50">
+                        <td class="py-4 px-6 border-b">01</td>
+                        <td class="py-4 px-6 border-b">Doña Martha</td>
+                        <td class="py-4 px-6 border-b">Causa, Pure con pollo, limonada</td>
+                        <td class="py-4 px-6 border-b">20/11/2024</td>
+                        <td class="py-4 px-6 border-b">Efectivo</td>
+                        <td class="py-4 px-6 border-b">
+                            <span class="bg-yellow-400 text-white text-sm py-1 px-4 rounded-full">Recogido</span>
+                        </td>
+                        <td class="py-4 px-6 border-b text-center">
+                            <i class="fas fa-trash-alt text-yellow-500 cursor-pointer"></i>
+                        </td>
+                    </tr>
+                    <!-- Row 2 -->
+                    <tr class="hover:bg-gray-50">
+                        <td class="py-4 px-6 border-b">02</td>
+                        <td class="py-4 px-6 border-b">Doña Martha</td>
+                        <td class="py-4 px-6 border-b">Causa, Pure con pollo, limonada</td>
+                        <td class="py-4 px-6 border-b">20/11/2024</td>
+                        <td class="py-4 px-6 border-b">Efectivo</td>
+                        <td class="py-4 px-6 border-b">
+                            <span class="bg-gray-400 text-white text-sm py-1 px-4 rounded-full">Cancelado</span>
+                        </td>
+                        <td class="py-4 px-6 border-b text-center">
+                            <i class="fas fa-trash-alt text-yellow-500 cursor-pointer"></i>
+                        </td>
+                    </tr>
+                    <!-- Row 3 -->
+                    <tr class="hover:bg-gray-50">
+                        <td class="py-4 px-6 border-b">03</td>
+                        <td class="py-4 px-6 border-b">Doña Martha</td>
+                        <td class="py-4 px-6 border-b">Causa, Pure con pollo, limonada</td>
+                        <td class="py-4 px-6 border-b">20/11/2024</td>
+                        <td class="py-4 px-6 border-b">Efectivo</td>
+                        <td class="py-4 px-6 border-b">
+                            <span class="bg-yellow-400 text-white text-sm py-1 px-4 rounded-full">Recogido</span>
+                        </td>
+                        <td class="py-4 px-6 border-b text-center">
+                            <i class="fas fa-trash-alt text-yellow-500 cursor-pointer"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</body>
+</html>

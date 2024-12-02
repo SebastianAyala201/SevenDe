@@ -1,0 +1,20 @@
+/*Sidebar */
+.sidebar {
+  width: 16rem; /* 64 * 0.25rem */
+  background-color: #F2EAE1; /* bg-gray-100 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem; /* py-8 px-4 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+}
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem; /* p-12 */
+    background-color: #fdfdfd; /* bg-white */
+  }
+  

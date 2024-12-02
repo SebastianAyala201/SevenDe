@@ -5,27 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel del Cliente</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="flex min-h-screen bg-white">
 
     <!-- Sidebar -->
-    <aside class="w-64 bg-gray-100 flex flex-col items-center py-8 px-4 shadow-md">
+    <aside class="sidebar">
         <h1 class="text-2xl font-bold text-black mb-6">SevenDe</h1>
 
         <!-- Profile Section -->
         <div class="flex flex-col items-center mb-8">
-            <img src="https://placehold.co/80x80" alt="Foto de perfil de Sebastian Ayala" class="rounded-full w-20 h-20 mb-4">
+            <img src="../img/sebas.png" alt="Foto de perfil de Sebastian Ayala" class="rounded-full w-20 h-20 mb-4">
             <p class="text-lg font-bold text-black">Sebastian Ayala</p>
             <p class="text-yellow-500 font-semibold">Estudiante</p>
         </div>
 
         <!-- Navigation Links -->
         <nav class="flex flex-col gap-4 w-full">
-            <a href="#" class="flex items-center gap-4 p-2 rounded-lg bg-yellow-400 text-white font-bold">
+            <a href="panelcinicio.html" class="flex items-center gap-4 p-2 rounded-lg bg-yellow-400 text-white font-bold">
                 <i class="fas fa-home"></i>
                 Inicio
             </a>
-            <a href="#" class="flex items-center gap-4 p-2 rounded-lg text-gray-700 hover:bg-gray-200">
+            <a href="catalogo.html" class="flex items-center gap-4 p-2 rounded-lg text-gray-700 hover:bg-gray-200">
                 <i class="fas fa-utensils"></i>
                 Pedir menú
             </a>
@@ -45,10 +46,10 @@
     </aside>
 
     <!-- Main Content -->
-    <main class="flex-1 flex flex-col items-center justify-center p-12 bg-white">
+    <main class="main">
         <div class="grid grid-cols-2 gap-8 max-w-4xl w-full">
             <!-- Pedir menú -->
-            <a href="#" class="flex items-center justify-center gap-4 bg-yellow-400 text-white font-bold p-6 rounded-lg shadow-md hover:bg-yellow-500 transition">
+            <a href="catalogo.html" class="flex items-center justify-center gap-4 bg-yellow-400 text-white font-bold p-6 rounded-lg shadow-md hover:bg-yellow-500 transition">
                 <i class="fas fa-user text-3xl"></i>
                 Pedir menú
             </a>

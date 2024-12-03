@@ -1,310 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Workbench&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <title>SevenDe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-
-<style>
-
-    *{
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-  
-    }
-
-    body{
-        overflow-x: hidden;
-    }
-
-    .main{
-        width: 100%;
-        height: 100%;
-        max-width: 100%;
-        margin: 0 auto;
-    }
-    
-    .inicio{
-        height: 100%;
-        width: 100%;
-        min-height: 100vh;
-        position: relative;
-    }
-
-    .inicio header .logo h2 a{
-        display: block;
-        font-size: 200px;
-        font-weight: 600;
-        text-decoration: none;
-        color: rgb(255, 92, 92);
-        margin-top: 150px;
-        font-family: "poppins", sans-serif;
-
-    }
-
-    h1{
-        text-align: center;
-        font-family: "poppins", sans-serif;
-    }
-
-    header {
-
-        color:black;
-        text-align: center;
-        padding: 1em 0;
-    }
-
-    nav a{
-        position: relative;
-        color: black;
-        text-decoration: none;
-        font-size: 28px;
-        font-weight: 500;
-        margin-left: 40px;
-        font-family: 'Workbench', sans-serif;
-    }
-    nav a::before {
-        content: '';
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: black;
-        transition: .3s;
-    }
-    nav a:hover::before{
-        width: 100%;
-    }
-    nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        margin-top: 40px;
-        
-    }
-
-    nav ul li {
-        margin: 0 40px;
-    }
-
-    nav ul li a {
-        text-decoration: none;
-        color: black;
-        font-weight: bold;
-    }
-
-    .logo {
-    display: block;
-    margin-right: auto;
-    margin-left: auto; 
-    margin-top: 4px;
-}
-.inici { 
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(2. 1fr);
-    grid-template-areas: "txt imagen ";
-    align-items: center;
-    gap: 2rem;
-    margin-top: 140px;
-}
-.txt {
-    grid-area: txt;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    margin-left: 300px;
-    color: white;
-    font-family: "poppins", sans-serif;
-}
-.img img {
-    grid-area: imagen;
-    width: 400px;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 270px;
-}
-.txt p {
-    margin-top: 20px;
-    font-family: "poppins", sans-serif;
-}
-.txt h2 {
-    margin-top: 20px;
-    font-family: "poppins", sans-serif;
-}
-body{
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-h2{
-    margin-top: 30px;
-    align-items: center;
-    justify-self: center;
-    color: black;
-    font-family: "poppins", sans-serif;
-}
-.txt p{
-    color: black;
-    font-family: "poppins", sans-serif;
-}
-.gif {
-    width: 100px;
-    height: 100px;
-    margin: 40px;
-}
-.team-members {
-    margin-top: 210px;
-    display: flex;
-    flex-direction: column; /* Cambiar de fila a columna */
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 40vh;
-    font-family: "poppins", sans-serif;
-    position: relative; /* Agregar posición relativa al contenedor */
-}
-.team-member{
-    text-align: center;
-            margin: 30px;
-    color: black;
-            font-family: "poppins", sans-serif;
-            display: flex;
-    margin-top: 5px;
-    backdrop-filter: blur(10px); /* Ajusta el valor de blur según sea necesario */
-    background-color: rgba(255, 255, 255, 0.5); /* Ajusta el color y la opacidad del fondo */
-    z-index: -1; /* Coloca el cuadro detrás del contenido */
-    border-radius: 10px;
-    width: 580px; 
-    height: 760px; 
-        margin: 0 100px; 
-        background-color: transparent; 
-        border: 2px solid black; 
-
-        overflow: hidden;
-        margin-top: 40px;
-
-
-        padding: 5%;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            
-
-}
-
-.team-member img {
-    width: 130px;
-    height: 130px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    margin-top: -15%;
-}
-.team-member p {
-    margin-top: -4%;
-    margin-left: 15px;
-    font-family: "poppins", sans-serif;
-}
-.team-member h23 {
-    margin-top: 10px;
-   
-}
-#video-background {
-    position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        z-index: -1000;
-    }
-</style>
-<body>
-    <section class="inicio">
-        <video id="video-background" autoplay muted loop>
-            <source src="../img/Video_Fondo_SevenDe7.mp4" type="video/mp4">
-            
-        </video>
-
-        <div class="main">
-            <header>
-                <nav>
-                    <ul>
-                        <li><a href="./index.html">Inicio</a></li>
-                        <li><a href="./aboutus.html">Sobre Nosotros</a></li>
-                        <li><a href="./contacto.html">Contacto</a></li>
-    
-                    </ul>
-                </nav>
-            </header>
+<body class="bg-yellow-400 font-sans h-screen flex flex-col justify-between">
+    <!-- Navbar -->
+    <header class="bg-yellow-400 flex justify-between items-center px-10 py-6">
+        <nav class="flex space-x-10 text-lg font-semibold">
+            <a href="index.html" class=" hover:text-gray-700">INICIO</a>
+            <a href="aboutus.html" class="hover:text-gray-700">SOBRE NOSOTROS</a>
+            <a href="contacto.html" class="hover:text-gray-700 border-b-4 border-black pb-1">CONTACTO</a>
+        </nav>
+        <a class="px-6 py-2 bg-white text-gray-800 font-semibold rounded-lg shadow-md hover:bg-gray-100 border border-black" href="../templates/iniciarsesion.html">
+            INICIAR SESIÓN
+        </a>
+    </header>
+    <!-- Main Content -->
+    <main class="flex items-center justify-between px-16 py-8 flex-grow">
+        <div class="max-w-xl">
+            <h1 class="text-4xl font-extrabold text-black leading-tight">
+                ¿Quieres que más estudiantes disfruten de tus almuerzos?
+            </h1>
+            <p class="mt-6 text-lg text-black">
+                ¡Únete a nuestro catálogo y lleva tus platos directamente a quienes más los necesitan! Como parte de nuestra plataforma, tus menús estarán al alcance de muchos estudiantes, ayudándolos a elegir y reservar con rapidez y comodidad.
+                <br><br>
+                Ser parte de nuestro equipo es sencillo: ponte en contacto con nosotros y te guiaremos en cada paso para que tus almuerzos se destaquen entre las mejores opciones.
+            </p>
         </div>
-
-        <div class="team-members">
-            
-            <div class="team-member" id="tm1">
-                <img src = "../img/sebas.png">
-                <div class="nomas">
-                    <p> Sebastián Santiago Ayala Alberca </p>
-                    <h23> CEO</h23>
-                </div>
-              
-            </div>
-    
-            <div class="team-member" id="tm2" > 
-                <img src="../img/haru.jpg">
-                <div class="nomas1">
-                    <p> Harumi Nayeli Contreras Quispe </p>
-                    <h23> Ventas y marketing</h23>
-                </div>
-                
-            </div>
-    
-            <div class="team-member" id="tm3"> 
-                <img src="../img/benja.jpg">
-                <div class="nomas2">
-                    <p> José Benjamín Flores Gómez </p>
-                    <h23> Desarrollador de software</h23>
-                </div>
-                
-            </div>
-    
-            <div class="team-member" id="tm4"> 
-                <img src="../img/abi.png">
-                <div class="nomas3">   
-                    <p> Abigail Yomela Llana Osorio </p>
-                    <h23> Finanzas</h23>
-                </div>
- 
-            </div>
-    
+        <div>
+            <img src="https://placehold.co/300x300" alt="Logo de SevenDe con un chef, utensilios de cocina y una bandeja" class="w-64">
         </div>
-    
+    </main>
 
-        
-    </section>
-
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="../scripts/sc.js"></script>
-
+    <!-- Footer -->
+    <footer class="bg-white w-full">
+        <div class="px-16 py-8 flex flex-col sm:flex-row justify-between">
+            <div>
+                <h2 class="text-lg font-semibold text-black mb-4">Equipo de soporte:</h2>
+                <ul class="text-black space-y-1">
+                    <li>Sebastián Santiago Ayala Alberca</li>
+                    <li>Milagros Jesús Reyes Espinoza</li>
+                    <li>Josué Armando Torres Mariluz</li>
+                    <li>Abigail Yomela Llana Osorio</li>
+                </ul>
+            </div>
+            <div class="mt-6 sm:mt-0 space-y-2 text-black">
+                <p><i class="fas fa-envelope"></i> Correo: sevendefisi@gmail.com</p>
+                <p><i class="fas fa-phone"></i> WhatsApp: +51 986 812 040</p>
+            </div>
+        </div>
+    </footer>
 </body>
-
-
-    
-
 </html>

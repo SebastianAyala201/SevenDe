@@ -6,19 +6,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-<body class="bg-yellow-500 text-gray-900">
-
-    <header class="bg-yellow-500 flex justify-between items-center px-10 py-6">
+<body class="bg-yellow-400 text-gray-900">
+    <header class="bg-yellow-400 flex justify-between items-center px-10 py-6">
         <nav class="flex space-x-10 text-lg font-semibold">
-            <a href="index.html" class="border-b-4 border-black pb-1">INICIO</a>
+            <a href="index.html" class=" hover:text-gray-700 border-b-4 border-black pb-1">INICIO</a>
             <a href="aboutus.html" class="hover:text-gray-700">SOBRE NOSOTROS</a>
             <a href="contacto.html" class="hover:text-gray-700">CONTACTO</a>
         </nav>
-        <button class="px-6 py-2 bg-white text-gray-800 font-semibold rounded-lg shadow-md" href="iniciarsesion.html">
+        <a class="px-6 py-2 bg-white text-gray-800 font-semibold rounded-lg shadow-md hover:bg-gray-100 border border-black" href="../templates/iniciarsesion.html">
             INICIAR SESIÓN
-        </button>
+        </a>
     </header>
-
     <main class="text-center py-12 px-6">
         <div class="flex justify-center items-center space-x-8">
             <div class="text-left">
@@ -27,7 +25,7 @@
                     Explora, reserva y disfruta: SevenDe hace tu almuerzo más sencillo
                 </p>
             </div>
-            <img src="https://placehold.co/150x150" alt="Logo of SevenDe, a chef hat with utensils" class="w-40 h-40">
+            <img src="../img/logo-sevende.png" alt="Logo of SevenDe, a chef hat with utensils" class="w-46 h-46">
         </div>
 
         <section class="mt-16">
@@ -36,11 +34,15 @@
                 Accede a menús variados, reserva con anticipación y disfruta de una experiencia única. 
                 ¡Haz que tu almuerzo sea rápido, seguro y delicioso!
             </p>
-            <button class="px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-lg shadow-md mb-8" href="iniciarsesion.html">
+        
+            <!-- Botón con espaciado inferior ajustado -->
+            <a class="px-6 py-3 bg-white hover:bg-yellow-600 text-black font-bold rounded-lg shadow-md mb-8 p-4 inline-block"
+                href="iniciarsesion.html">
                 SOLICITAR MENÚ
-            </button>
-
-            <div class="max-w-xl mx-auto">
+            </a>
+        
+            <!-- Video con margen superior para separación -->
+            <div class="max-w-xl mx-auto mt-8">
                 <video class="w-full rounded-lg shadow-md" controls>
                     <source src="../img/Video_Fondo_SevenDe7.mp4" type="video/mp4">
                     Tu navegador no soporta el elemento de video.
@@ -48,7 +50,6 @@
             </div>
         </section>
     </main>
-
 </body>
 </html>
 

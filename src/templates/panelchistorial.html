@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Pedidos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="flex min-h-screen bg-white">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h1 class="text-2xl font-bold text-black mb-6">SevenDe</h1>
+
+        <!-- Profile Section -->
+        <div class="flex flex-col items-center mb-8">
+            <img src="../img/sebas.png" alt="Foto de perfil de Sebastian Ayala" class="rounded-full w-20 h-20 mb-4">
+            <p class="text-lg font-bold text-black">Sebastian Ayala</p>
+            <p class="text-yellow-500 font-semibold">Estudiante</p>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="flex flex-col gap-4 w-full">
+            <a href="panelcinicio.html" class="flex items-center gap-4 p-2 rounded-lg text-gray-700 hover:bg-gray-200">
+                <i class="fas fa-home"></i>
+                Inicio
+            </a>
+            <a href="catalogo.html" class="flex items-center gap-4 p-2 rounded-lg text-gray-700 hover:bg-gray-200">
+                <i class="fas fa-utensils"></i>
+                Pedir menú
+            </a>
+            <a href="panelchistorial.html" class="flex items-center gap-4 p-2 rounded-lg bg-yellow-400 text-white font-bold">
+                <i class="fas fa-file-alt"></i>
+                Historial de pedidos
+            </a>
+        </nav>
+
+        <!-- Logout -->
+        <div class="mt-auto w-full text-center">
+            <a href="index.html" class="flex items-center justify-center gap-2 text-gray-700 hover:text-gray-900 mt-8">
+                <i class="fas fa-sign-out-alt"></i>
+                Cerrar sesión
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-12 bg-white">
+        <h1 class="text-2xl font-bold mb-6">Historial de Pedidos</h1>
+
+        <!-- Upload Excel File -->
+        <div class="mb-4">
+            <label class="block mb-2 text-sm font-medium text-gray-700">Cargar archivo Excel:</label>
+            <input type="file" id="uploadExcel" class="block w-full text-sm text-gray-500 border-gray-300 rounded-md shadow-sm focus:border-yellow-500 focus:ring-yellow-500">
+        </div>
+
+        <!-- Table Container -->
+        <div id="excelTable" class="bg-white shadow-md rounded-lg overflow-hidden"></div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script>
+        // Load and render the Excel file
+        document.getElementById('uploadExcel').addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                const data = new Uint8Array(e.target.result);
+                const workbook = XLSX.read(data, { type: 'array' });
+
+                // Get the first sheet
+                const sheetName = workbook.SheetNames[0];
+                const worksheet = workbook.Sheets[sheetName];
+
+                // Convert the sheet to HTML
+                const htmlTable = XLSX.utils.sheet_to_html(worksheet, { id: "excelTable" });
+                document.getElementById('excelTable').innerHTML = htmlTable;
+            };
+
+            reader.readAsArrayBuffer(file);
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</body>
+</html>

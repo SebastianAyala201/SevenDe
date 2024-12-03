@@ -23,88 +23,115 @@
             // Obtener el parámetro de la URL
             const params = new URLSearchParams(window.location.search);
             const menu = params.get('menu');
-        
+    
             // Mostrar el título dinámicamente
             const titleElement = document.getElementById('title');
             if (menu) {
-              titleElement.innerText = `¡Has elegido el menú: ${menu}!`;
+                titleElement.innerText = `¡Has elegido el menú: ${menu}!`;
             } else {
-              titleElement.innerText = 'Menú no seleccionado';
+                titleElement.innerText = 'Menú no seleccionado';
             }
-          </script>
-        
-        <form class="grid grid-cols-3 gap-8">
+        </script>
+    
+        <form class="grid grid-cols-3 gap-8" id="menuForm">
             <div>
                 <h2 class="text-lg font-semibold mb-4">ENTRADAS:</h2>
                 <div class="space-y-3">
                     <label class="flex items-center">
-                        <input type="radio" name="entrada" class="form-radio text-blue-500" checked>
+                        <input type="radio" name="entrada" value="CAUSA" class="form-radio text-blue-500" checked>
                         <span class="ml-2 text-gray-800">CAUSA</span>
                     </label>
                     <label class="flex items-center">
-                        <input type="radio" name="entrada" class="form-radio text-blue-500">
+                        <input type="radio" name="entrada" value="SOPA" class="form-radio text-blue-500">
                         <span class="ml-2 text-gray-800">SOPA</span>
                     </label>
                     <label class="flex items-center">
-                        <input type="radio" name="entrada" class="form-radio text-blue-500">
+                        <input type="radio" name="entrada" value="ENSALADA CESAR" class="form-radio text-blue-500">
                         <span class="ml-2 text-gray-800">ENSALADA CESAR</span>
                     </label>
                 </div>
             </div>
-
+    
             <div>
                 <h2 class="text-lg font-semibold mb-4">FONDO:</h2>
                 <div class="space-y-3">
                     <label class="flex items-center">
-                        <input type="radio" name="fondo" class="form-radio text-blue-500" checked>
+                        <input type="radio" name="fondo" value="ARROZ CON POLLO" class="form-radio text-blue-500" checked>
                         <span class="ml-2 text-gray-800">ARROZ CON POLLO</span>
                     </label>
                     <label class="flex items-center">
-                        <input type="radio" name="fondo" class="form-radio text-blue-500">
+                        <input type="radio" name="fondo" value="PURE CON POLLO" class="form-radio text-blue-500">
                         <span class="ml-2 text-gray-800">PURE CON POLLO</span>
                     </label>
                     <label class="flex items-center">
-                        <input type="radio" name="fondo" class="form-radio text-blue-500" >
+                        <input type="radio" name="fondo" value="LENTEJAS CON PESCADO" class="form-radio text-blue-500">
                         <span class="ml-2 text-gray-800">LENTEJAS CON PESCADO</span>
                     </label>
                 </div>
             </div>
-
+    
             <div>
                 <h2 class="text-lg font-semibold mb-4">BEBIDA:</h2>
                 <div class="space-y-3">
                     <label class="flex items-center">
-                        <input type="radio" name="bebida" class="form-radio text-blue-500" checked>
+                        <input type="radio" name="bebida" value="CHICHA" class="form-radio text-blue-500" checked>
                         <span class="ml-2 text-gray-800">CHICHA</span>
                     </label>
                     <label class="flex items-center">
-                        <input type="radio" name="bebida" class="form-radio text-blue-500">
+                        <input type="radio" name="bebida" value="LIMONADA" class="form-radio text-blue-500">
                         <span class="ml-2 text-gray-800">LIMONADA</span>
                     </label>
                     <label class="flex items-center">
-                        <input type="radio" name="bebida" class="form-radio text-blue-500">
+                        <input type="radio" name="bebida" value="EMOLIENTE" class="form-radio text-blue-500">
                         <span class="ml-2 text-gray-800">EMOLIENTE</span>
                     </label>
                 </div>
             </div>
         </form>
-
-        <div class="botones">
+    
+        <div class="flex justify-center space-x-4 mt-6">
             <button class="px-6 py-2 bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-lg shadow-md" onclick="openWhatsApp()">
                 RESERVAR
             </button>
             <button class="px-6 py-2 bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-lg shadow-md" onclick="openWhatsApp()">
                 PAGAR
             </button>
-            <script>
-                function openWhatsApp() {
-                    const numero = "51986812040";  // Reemplaza con el número de WhatsApp
-                    const mensaje = "Hola";  // Mensaje opcional
-                    const url = `https://wa.link/ensk05`;
-                    window.open(url, '_blank');
-                }
-            </script>
         </div>
+    
+        <div class="mt-8 text-center">
+            <button class="px-6 py-2 bg-yellow-600 hover:bg-yellow-700 text-white font-bold rounded-lg shadow-md" onclick="copiarLista()">
+                COPIAR MENÚ
+            </button>
+            <p class="mt-2 text-gray-600">Copia tu menú para completar el proceso por WhatsApp.</p>
+            <textarea id="selectedItems" class="mt-4 w-full p-4 border rounded-lg bg-gray-100" rows="5" readonly></textarea>
+            <p class="mt-4 text-gray-600">Este texto ha sido copiado al portapapeles.</p>
+        </div>
+    
+        <script>
+            function copiarLista() {
+                const form = document.getElementById('menuForm');
+                const seleccionados = new FormData(form);
+                const texto = [];
+        
+                // Solo agregar los valores, sin claves
+                for (const valor of seleccionados.values()) {
+                    texto.push(valor);
+                }
+        
+                const lista = texto.join('\n'); // Unir cada valor con un salto de línea
+                const textarea = document.getElementById('selectedItems');
+                textarea.value = lista; // Mostrar la lista en el textarea
+                textarea.select();
+                document.execCommand('copy'); // Copiar al portapapeles
+                alert('Selección copiada al portapapeles'); // Avisar al usuario
+            }
+        
+            function openWhatsApp() {
+                const url = `https://wa.link/ensk05`;
+                window.open(url, '_blank');
+            }
+        </script>        
+    </div>
     </div>
 
 </body>

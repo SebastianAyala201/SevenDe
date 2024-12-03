@@ -1,57 +1,97 @@
-<!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedido</title>
+    <title>SevenDe - Doña Martha</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gradient-to-r from-yellow-400 to-yellow-500 flex flex-col items-center min-h-screen py-8">
+<body class="bg-gradient-to-b from-yellow-500 to-yellow-400 min-h-screen flex items-center justify-center">
 
-    <!-- Header -->
-    <header class="flex justify-between items-center w-full max-w-6xl px-4 mb-8">
-        <img src="../img/logotiposv.png" alt="Logo de Seven'De con utensilios de cocina" class="w-20">
-        <button class="bg-white text-black font-semibold py-2 px-4 rounded-lg shadow hover:bg-gray-100">CERRAR SESIÓN</button>
-    </header>
+    <div class="absolute top-6 left-8 flex items-center space-x-4">
+        <img src="../img/logotiposv.png" alt="Logo of Seven'De, a chef's hat with utensils" class="w-24 h-24">
+    </div>
 
-    <!-- Title -->
-    <h1 class="text-2xl font-bold text-black mb-6">NEGOCIO 2</h1>
+    <button class="absolute top-6 right-8 px-4 py-2 bg-white text-gray-800 font-semibold rounded-lg shadow-md">
+        CERRAR SESIÓN
+    </button>
 
-    <!-- Order Form -->
-    <div class="bg-white rounded-lg shadow-lg p-8 w-full max-w-md">
-        <h2 class="text-lg font-bold text-black mb-6 text-center">PIDE TUS FAVORITOS:</h2>
-        <form action="#" method="POST" class="flex flex-col gap-4">
-            <!-- Entrada -->
+    <div class="bg-white bg-opacity-70 rounded-xl p-8 shadow-lg">
+        <h1 class="text-2xl font-bold text-center text-gray-800 mb-6">DOÑA MARTHA</h1>
+        
+        <form class="grid grid-cols-3 gap-8">
             <div>
-                <label for="entrada" class="block text-gray-700 font-bold mb-2">ENTRADAS:</label>
-                <input type="text" id="entrada" name="entrada" value="Causa" 
-                       class="w-full p-2 border border-gray-300 rounded-lg bg-gray-100 text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400" readonly>
+                <h2 class="text-lg font-semibold mb-4">ENTRADAS:</h2>
+                <div class="space-y-3">
+                    <label class="flex items-center">
+                        <input type="radio" name="entrada" class="form-radio text-blue-500" checked>
+                        <span class="ml-2 text-gray-800">CAUSA</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" name="entrada" class="form-radio text-blue-500">
+                        <span class="ml-2 text-gray-800">SOPA</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" name="entrada" class="form-radio text-blue-500">
+                        <span class="ml-2 text-gray-800">ENSALADA CESAR</span>
+                    </label>
+                </div>
             </div>
 
-            <!-- Fondo -->
             <div>
-                <label for="fondo" class="block text-gray-700 font-bold mb-2">FONDO:</label>
-                <input type="text" id="fondo" name="fondo" value="Puré con pollo" 
-                       class="w-full p-2 border border-gray-300 rounded-lg bg-gray-100 text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400" readonly>
+                <h2 class="text-lg font-semibold mb-4">FONDO:</h2>
+                <div class="space-y-3">
+                    <label class="flex items-center">
+                        <input type="radio" name="fondo" class="form-radio text-blue-500">
+                        <span class="ml-2 text-gray-800">ARROZ CON POLLO</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" name="fondo" class="form-radio text-blue-500">
+                        <span class="ml-2 text-gray-800">PURE CON POLLO</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" name="fondo" class="form-radio text-blue-500" checked>
+                        <span class="ml-2 text-gray-800">LENTEJAS CON PESCADO</span>
+                    </label>
+                </div>
             </div>
 
-            <!-- Bebida -->
             <div>
-                <label for="bebida" class="block text-gray-700 font-bold mb-2">BEBIDA:</label>
-                <input type="text" id="bebida" name="bebida" value="Limonada" 
-                       class="w-full p-2 border border-gray-300 rounded-lg bg-gray-100 text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400" readonly>
-            </div>
-
-            <!-- Buttons -->
-            <div class="flex justify-between mt-6">
-                <button type="button" class="bg-yellow-400 text-white font-bold py-2 px-6 rounded-lg shadow hover:bg-yellow-500 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
-                    RESERVAR
-                </button>
-                <button type="button" class="bg-yellow-400 text-white font-bold py-2 px-6 rounded-lg shadow hover:bg-yellow-500 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
-                    PAGAR
-                </button>
+                <h2 class="text-lg font-semibold mb-4">BEBIDA:</h2>
+                <div class="space-y-3">
+                    <label class="flex items-center">
+                        <input type="radio" name="bebida" class="form-radio text-blue-500" checked>
+                        <span class="ml-2 text-gray-800">CHICHA</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" name="bebida" class="form-radio text-blue-500">
+                        <span class="ml-2 text-gray-800">LIMONADA</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" name="bebida" class="form-radio text-blue-500">
+                        <span class="ml-2 text-gray-800">EMOLIENTE</span>
+                    </label>
+                </div>
             </div>
         </form>
+
+        <div class="botones">
+            <button class="px-6 py-2 bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-lg shadow-md" onclick="openWhatsApp()">
+                RESERVAR
+            </button>
+            <button class="px-6 py-2 bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-lg shadow-md" onclick="openWhatsApp()">
+                PAGAR
+            </button>
+            <script>
+                function openWhatsApp() {
+                    const numero = "51986812040";  // Reemplaza con el número de WhatsApp
+                    const mensaje = "Hola";  // Mensaje opcional
+                    const url = `https://wa.link/ensk05`;
+                    window.open(url, '_blank');
+                }
+            </script>
+        </div>
     </div>
 
 </body>
